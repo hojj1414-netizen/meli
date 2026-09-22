@@ -709,7 +709,6 @@
       const success = document.getElementById('successMessage');
       const submitBtn = form.querySelector('button[type="submit"]');
 
-      // غیرفعال کردن دکمه برای جلوگیری از ارسال تکراری
       submitBtn.disabled = true;
       submitBtn.textContent = 'در حال ارسال...';
 
@@ -727,23 +726,22 @@
       };
 
       try {
-        const response = await fetch('https://hook.eu1.make.com/hgkhe1e1dsdsqrp6nwxg4b3vhvar6xfm', {
+        // mode: 'no-cors' برای دور زدن محدودیت CORS مرورگر
+        await fetch('https://hook.eu1.make.com/hgkhe1e1dsdsqrp6nwxg4b3vhvar6xfm', {
           method: 'POST',
+          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(data)
         });
 
-        if (response.ok) {
-          form.style.display = 'none';
-          success.style.display = 'block';
-          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          throw new Error('خطا در ارسال');
-        }
+        // با no-cors نمی‌تونیم پاسخ رو بخونیم، پس بعد از ارسال موفق نشون می‌دیم
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } catch (err) {
-        alert('خطا در ارسال درخواست. لطفاً دوباره تلاش کنید یا بعداً مراجعه کنید.');
+        alert('خطا در ارسال درخواست. لطفاً دوباره تلاش کنید.');
         submitBtn.disabled = false;
         submitBtn.textContent = 'ارسال درخواست همکاری';
       }
