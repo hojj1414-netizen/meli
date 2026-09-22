@@ -705,28 +705,33 @@
   <script>
     async function handleSubmit(e) {
       e.preventDefault();
+
       const form = document.getElementById('applicationForm');
       const success = document.getElementById('successMessage');
       const submitBtn = form.querySelector('button[type="submit"]');
+
+      const getValue = (id) => {
+        const el = document.getElementById(id);
+        return el && typeof el.value === 'string' ? el.value.trim() : '';
+      };
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'در حال ارسال...';
 
       const data = {
-        fullName: document.getElementById('fullName').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        nationalId: document.getElementById('nationalId').value.trim(),
-        birthDate: document.getElementById('birthDate').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        city: document.getElementById('city').value.trim(),
-        experience: document.getElementById('experience').value,
-        education: document.getElementById('education').value,
-        about: document.getElementById('about').value.trim(),
-        resume: document.getElementById('resume').value.trim()
+        fullName: getValue('fullName'),
+        phone: getValue('phone'),
+        nationalId: getValue('nationalId'),
+        birthDate: getValue('birthDate'),
+        email: getValue('email'),
+        city: getValue('city'),
+        experience: getValue('experience'),
+        education: getValue('education'),
+        about: getValue('about'),
+        resume: getValue('resume')
       };
 
       try {
-        // mode: 'no-cors' برای دور زدن محدودیت CORS مرورگر
         await fetch('https://hook.eu1.make.com/hgkhe1e1dsdsqrp6nwxg4b3vhvar6xfm', {
           method: 'POST',
           mode: 'no-cors',
@@ -736,11 +741,12 @@
           body: JSON.stringify(data)
         });
 
-        // با no-cors نمی‌تونیم پاسخ رو بخونیم، پس بعد از ارسال موفق نشون می‌دیم
         form.style.display = 'none';
         success.style.display = 'block';
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
       } catch (err) {
+        console.error('Webhook error:', err);
         alert('خطا در ارسال درخواست. لطفاً دوباره تلاش کنید.');
         submitBtn.disabled = false;
         submitBtn.textContent = 'ارسال درخواست همکاری';
