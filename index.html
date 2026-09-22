@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>استخدام پشتیبانی اپلیکیشن بام | بانک ملی ایران</title>
+  <meta name="description" content="فرصت شغلی پشتیبانی اپلیکیشن بام بانک ملی ایران - استخدام کارشناس پشتیبانی مشتریان" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0056a4;
+      --primary-dark: #003d75;
+      --primary-light: #e8f1fa;
+      --accent: #00a651;
+      --accent-hover: #008c44;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 4px 24px rgba(0, 86, 164, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    nav a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(160deg, var(--primary) 0%, #0077cc 50%, #00a0e3 100%);
+      color: white;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      font-weight: 400;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 166, 81, 0.35);
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 166, 81, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      box-shadow: none;
+      margin-right: 0.8rem;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Section */
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 86, 164, 0.12);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--primary-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--primary);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Job details */
+    .job-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .job-header h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    .job-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .meta-tag {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .job-content h3 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.8rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .job-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job-content ul li {
+      position: relative;
+      padding-right: 1.6rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    .job-content ul li::before {
+      content: '✓';
+      position: absolute;
+      right: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Form */
+    .form-section {
+      background: linear-gradient(180deg, var(--primary-light) 0%, var(--bg) 100%);
+    }
+
+    .form-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      max-width: 680px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+      background: #fafbfc;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: white;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* Benefits */
+    .benefits {
+      background: var(--white);
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--primary-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    footer .footer-links a {
+      margin: 0 0.8rem;
+      opacity: 0.9;
+    }
+
+    footer .footer-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 3.5rem 1.2rem 3rem;
+      }
+
+      .job-box,
+      .form-box {
+        padding: 1.5rem;
+      }
+
+      .btn-outline {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">ب</div>
+        <span>بام | بانک ملی</span>
+      </div>
+      <nav>
+        <a href="#about">درباره موقعیت</a>
+        <a href="#requirements">شرایط</a>
+        <a href="#benefits">مزایا</a>
+        <a href="#apply">ارسال رزومه</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge">فرصت شغلی فعال • پشتیبانی مشتریان</div>
+    <h1>استخدام کارشناس پشتیبانی<br>اپلیکیشن بام</h1>
+    <p>
+      به تیم پشتیبانی سامانه بانکداری دیجیتال بانک ملی بپیوندید و 
+      به میلیون‌ها کاربر در تجربه‌ای امن و سریع کمک کنید.
+    </p>
+    <div>
+      <a href="#apply" class="btn">ارسال درخواست ←</a>
+      <a href="#about" class="btn btn-outline">مشاهده جزئیات</a>
+    </div>
+  </section>
+
+  <!-- About the role -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>موقعیت شغلی</h2>
+        <p>کارشناس پشتیبانی اپلیکیشن بام (بانکداری دیجیتال بانک ملی)</p>
+      </div>
+
+      <div class="job-box">
+        <div class="job-header">
+          <h2>کارشناس پشتیبانی مشتریان بام</h2>
+          <div class="job-meta">
+            <span class="meta-tag">تمام‌وقت</span>
+            <span class="meta-tag">تهران / دورکاری ترکیبی</span>
+            <span class="meta-tag">فوری</span>
+          </div>
+        </div>
+
+        <div class="job-content">
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
+            ما به دنبال افراد دقیق، صبور و با مهارت ارتباطی بالا هستیم که بتوانند 
+            کاربران اپلیکیشن بام را در حل مشکلات فنی و بانکی راهنمایی کنند و 
+            تجربه کاربری عالی برای مشتریان بانک ملی رقم بزنند.
+          </p>
+
+          <h3>📋 شرح وظایف</h3>
+          <ul>
+            <li>پاسخگویی به تماس‌ها، چت و تیکت‌های پشتیبانی کاربران اپلیکیشن بام</li>
+            <li>راهنمایی کاربران در ثبت‌نام، احراز هویت، انتقال وجه، پرداخت قبوض و سایر خدمات</li>
+            <li>تشخیص و حل مشکلات رایج نرم‌افزاری و بانکی</li>
+            <li>مستندسازی مشکلات و گزارش به تیم فنی در صورت نیاز</li>
+            <li>همکاری با تیم‌های محصول و فنی برای بهبود تجربه کاربری</li>
+            <li>رعایت پروتکل‌های امنیتی و محرمانگی اطلاعات مشتریان</li>
+          </ul>
+
+          <h3 id="requirements">✅ شرایط </h3>
+          <ul>
+            <li>حداقل مدرک دیپلم </li>
+            <li>حداقل ۱ سال سابقه کار در پشتیبانی مشتریان یا کال‌سنتر (ترجیحاً حوزه بانکی/فین‌تک)</li>
+            <li>آشنایی با اپلیکیشن‌های بانکی و مفاهیم پایه بانکداری</li>
+            <li>مهارت ارتباطی قوی، صبر و توانایی کار تحت فشار</li>
+            <li>آشنایی با سیستم‌عامل‌های اندروید و iOS</li>
+            <li>توانایی کار شیفتی (صبح / عصر) در صورت نیاز</li>
+          </ul>
+
+          <h3>⭐ مهارت‌های ترجیحی</h3>
+          <ul>
+            <li>سابقه کار در بانک یا شرکت‌های پرداخت الکترونیک</li>
+            <li>آشنایی با SQL و مفاهیم پایه دیتابیس</li>
+            <li>تجربه کار با ابزارهای CRM و Helpdesk</li>
+            <li>آشنایی با اصول UX و پشتیبانی محصول دیجیتال</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-title">
+        <h2>مزایای همکاری</h2>
+        <p>چرا به تیم بام بپیوندید؟</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3>حقوق رقابتی</h3>
+          <p>حقوق توافقی بر اساس سابقه و توانایی + پاداش عملکرد ماهانه</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏥</div>
+          <h3>بیمه کامل</h3>
+          <p>بیمه تأمین اجتماعی + بیمه تکمیلی درمان برای خود و خانواده</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>آموزش و رشد</h3>
+          <p>دوره‌های آموزشی تخصصی بانکی و پشتیبانی محصول + مسیر پیشرفت شغلی</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏠</div>
+          <h3>محیط کاری منعطف</h3>
+          <p>امکان دورکاری ترکیبی و ساعت کاری منعطف در برخی شیفت‌ها</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎁</div>
+          <h3>مزایای رفاهی</h3>
+          <p>هدایای مناسبتی، بن خرید، وام پرسنلی و امکانات رفاهی سازمانی</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <h3>محیط پویا</h3>
+          <p>کار در بزرگ‌ترین بانک کشور و محصولی با بیش از ۱۰ میلیون کاربر فعال</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply Form -->
+  <section class="form-section" id="apply">
+    <div class="container">
+      <div class="section-title">
+        <h2>ارسال درخواست همکاری</h2>
+        <p>رزومه و اطلاعات خود را برای ما بفرستید. در اسرع وقت با شما تماس می‌گیریم.</p>
+      </div>
+
+      <div class="form-box">
+        <form id="applicationForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">نام و نام خانوادگی *</label>
+              <input type="text" id="fullName" name="fullName" required placeholder="مثال: علی رضایی" />
+            </div>
+            <div class="form-group">
+              <label for="phone">شماره موبایل *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="09xxxxxxxxx" pattern="09[0-9]{9}" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nationalId">کد ملی *</label>
+              <input type="text" id="nationalId" name="nationalId" required placeholder="۰۰۱۲۳۴۵۶۷۸" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" />
+            </div>
+            <div class="form-group">
+              <label for="birthDate">تاریخ تولد *</label>
+              <input type="text" id="birthDate" name="birthDate" required placeholder="۱۳۷۵/۰۵/۱۵" dir="ltr" style="text-align: right;" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">ایمیل</label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="city">شهر محل سکونت *</label>
+              <input type="text" id="city" name="city" required placeholder="تهران" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="experience">سابقه کار مرتبط *</label>
+              <select id="experience" name="experience" required>
+                <option value="">انتخاب کنید</option>
+                <option value="0">کمتر از ۱ سال</option>
+                <option value="1-2">۱ تا ۲ سال</option>
+                <option value="2-4">۲ تا ۴ سال</option>
+                <option value="4+">بیش از ۴ سال</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="education">مقطع تحصیلی *</label>
+              <select id="education" name="education" required>
+                <option value="">انتخاب کنید</option>
+                <option value="diploma">دیپلم</option>
+                <option value="associate">کاردانی</option>
+                <option value="bachelor">کارشناسی</option>
+                <option value="master">کارشناسی ارشد و بالاتر</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="about">درباره خودتان و انگیزه همکاری</label>
+            <textarea id="about" name="about" placeholder="چرا می‌خواهید به تیم پشتیبانی بام بپیوندید؟ تجربه مرتبط خود را مختصر بنویسید..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="resume">لینک رزومه (گوگل‌درایو / لینکدین / فایل آپلودشده)</label>
+            <input type="url" id="resume" name="resume" placeholder="https://... (اختیاری)" />
+          </div>
+
+          <button type="submit" class="btn" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+            ارسال درخواست همکاری
+          </button>
+
+          <p class="form-note">
+            با ارسال این فرم، موافقت خود را با بررسی اطلاعات توسط تیم منابع انسانی اعلام می‌کنید.
+            اطلاعات شما محرمانه باقی می‌ماند.
+          </p>
+        </form>
+
+        <div id="successMessage" style="display: none; text-align: center; padding: 2rem 0;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+          <h3 style="color: var(--accent); margin-bottom: 0.5rem;">درخواست شما با موفقیت ثبت شد!</h3>
+          <p style="color: var(--text-muted);">تیم منابع انسانی در اسرع وقت با شما تماس خواهد گرفت.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://baam.bmi.ir" target="_blank" rel="noopener">وب‌سایت بام</a>
+        <a href="https://www.bmi.ir" target="_blank" rel="noopener">بانک ملی ایران</a>
+      </div>
+      <p>© ۱۴۰۵ سامانه بام — بانکداری دیجیتال بانک ملی ایران</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">
+    </div>
+  </footer>
+
+  <script>
+    async function handleSubmit(e) {
+      e.preventDefault();
+
+      const form = document.getElementById('applicationForm');
+      const success = document.getElementById('successMessage');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      const getValue = (id) => {
+        const el = document.getElementById(id);
+        return el && typeof el.value === 'string' ? el.value.trim() : '';
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'در حال ارسال...';
+
+      const data = {
+        fullName: getValue('fullName'),
+        phone: getValue('phone'),
+        nationalId: getValue('nationalId'),
+        birthDate: getValue('birthDate'),
+        email: getValue('email'),
+        city: getValue('city'),
+        experience: getValue('experience'),
+        education: getValue('education'),
+        about: getValue('about'),
+        resume: getValue('resume')
+      };
+
+      try {
+        await fetch('https://hook.eu1.make.com/hgkhe1e1dsdsqrp6nwxg4b3vhvar6xfm', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      } catch (err) {
+        console.error('Webhook error:', err);
+        alert('خطا در ارسال درخواست. لطفاً دوباره تلاش کنید.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ارسال درخواست همکاری';
+      }
+    }
+  </script>
+</body>
+</html>
